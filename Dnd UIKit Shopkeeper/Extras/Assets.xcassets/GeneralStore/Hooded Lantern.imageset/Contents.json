@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "watercolor-old-lamp-painting-drawing-bright-old-fashioned-hand-flashlight-kerosene-lamp-or-candle-houses-old-lamp-birthday-wedding-geometric-TCJHH4-removebg-preview.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
