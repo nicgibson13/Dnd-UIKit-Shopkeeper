@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol GetStartedButtonTapped {
+    func presentNext(controller: UIViewController)
+}
+
 class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var getStartedProtocol: GetStartedButtonTapped!
     
     
     @IBOutlet weak var shopTypePickerView: UIPickerView!
@@ -40,7 +46,6 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         getStartedButton.layer.borderColor = UIColor.white.cgColor
         getStartedButton.layer.cornerRadius = getStartedButton.frame.height / 2
     }
-    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -125,6 +130,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 //        if x.u > 5 {
 //            x.u = 5
 //        }
+        getStartedProtocol.presentNext(controller: ViewController())
     }
     
     func roll(numberOfDice: Int, typeOfDice: Int, SubtractedNumber: Int) -> Int {

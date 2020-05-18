@@ -21,6 +21,7 @@
 		7C612B89237DDBCF00268E93 /* Open5e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C612B88237DDBCF00268E93 /* Open5e.swift */; };
 		7C612B8B237DE04F00268E93 /* magicItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C612B8A237DE04F00268E93 /* magicItemController.swift */; };
 		7C612B8D237DE63A00268E93 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C612B8C237DE63A00268E93 /* ItemTableViewCell.swift */; };
+		7C6505EE2472E48100694418 /* BigContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6505ED2472E48100694418 /* BigContainerViewController.swift */; };
 		7C7D347F23ABE8B200904869 /* BlacksmithController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D347E23ABE8B200904869 /* BlacksmithController.swift */; };
 		7C7D348123ABFB9700904869 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D348023ABFB9700904869 /* ItemInfoViewController.swift */; };
 		7C95ECB623A80C49003BAFA2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95ECB523A80C49003BAFA2 /* WelcomeViewController.swift */; };
@@ -48,6 +49,7 @@
 		7C612B88237DDBCF00268E93 /* Open5e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open5e.swift; sourceTree = "<group>"; };
 		7C612B8A237DE04F00268E93 /* magicItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magicItemController.swift; sourceTree = "<group>"; };
 		7C612B8C237DE63A00268E93 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		7C6505ED2472E48100694418 /* BigContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigContainerViewController.swift; sourceTree = "<group>"; };
 		7C7D347E23ABE8B200904869 /* BlacksmithController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacksmithController.swift; sourceTree = "<group>"; };
 		7C7D348023ABFB9700904869 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
 		7C95ECB523A80C49003BAFA2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../Views/WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				7C7D348023ABFB9700904869 /* ItemInfoViewController.swift */,
 				7CBDEBBF247052FF0083C1DE /* BaseController.swift */,
 				7CBDEBC1247053360083C1DE /* BaseContainerViewController.swift */,
+				7C6505ED2472E48100694418 /* BigContainerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				7C033C2C23A5CF8D0089BF66 /* shop.swift in Sources */,
 				7C612B75237DC9AB00268E93 /* ViewController.swift in Sources */,
 				7CF3786423A00EE600DC35B3 /* ContainerViewController.swift in Sources */,
+				7C6505EE2472E48100694418 /* BigContainerViewController.swift in Sources */,
 				7C033C2F23A6F3BF0089BF66 /* Blacksmith.swift in Sources */,
 				7CBDEBC42470580B0083C1DE /* Extensions.swift in Sources */,
 				7CBDEBC0247052FF0083C1DE /* BaseController.swift in Sources */,

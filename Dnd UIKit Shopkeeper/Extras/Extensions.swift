@@ -16,3 +16,12 @@ extension UIColor {
         static let Midnight = #colorLiteral(red: 0.09019607843, green: 0.0862745098, blue: 0.1215686275, alpha: 1)
     }
 }
+
+extension UIStackView {
+    func addBackground(color: UIColor) {
+        let subview = UIView(frame: bounds)
+        subview.backgroundColor = color
+        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subview, at: 0)
+    }
+}

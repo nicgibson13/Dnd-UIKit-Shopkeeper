@@ -11,6 +11,8 @@ import UIKit
 class BaseViewController: UIViewController {
     
     @IBOutlet weak var bigView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -32,7 +34,7 @@ class BaseViewController: UIViewController {
         {
             gradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
         }
-        self.bigView.layer.insertSublayer(gradientLayer, at: 2)
+        self.bigView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     /*
