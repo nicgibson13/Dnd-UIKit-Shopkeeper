@@ -10,12 +10,14 @@
 import UIKit
 
 protocol SideSelectionDelegate {
-    func didTapButton(controller: UIViewController)
+    func didTapButton(sender: BaseContainerViewController, previousVC: Int, buttonNumber: Int)
 }
 
 class BaseContainerViewController: UIViewController {
     
     var selectionDelegate: SideSelectionDelegate!
+    var buttonNumber: Int = 0
+    var previousButtonNumber: Int = 0
     
     @IBOutlet weak var bigStackView: UIStackView!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -29,7 +31,8 @@ class BaseContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        dashboardStackView.addBackground(color: UIColor.MainColors.Midnight)
+        
+        //        dashboardStackView.addBackground(color: UIColor.MainColors.Midnight)
         // Do any additional setup after loading the view.
     }
     
@@ -38,11 +41,11 @@ class BaseContainerViewController: UIViewController {
     }
     
     @IBAction func dashboardButtonTapped(_ sender: Any) {
-        selectionDelegate.didTapButton(controller: WelcomeViewController())
+        selectionDelegate.didTapButton(sender: self, previousVC: previousButtonNumber, buttonNumber: 0)
     }
     
     @IBAction func shopItemTapped(_ sender: Any) {
-        selectionDelegate.didTapButton(controller: ViewController())
+        selectionDelegate.didTapButton(sender: self, previousVC: previousButtonNumber, buttonNumber: 1)
     }
     
     func createGradient() {
@@ -57,7 +60,7 @@ class BaseContainerViewController: UIViewController {
         profileImageView.layer.masksToBounds = false
         profileImageView.layer.borderColor = UIColor.black.cgColor
         profileImageView.backgroundColor = UIColor.white
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2.3
         profileImageView.clipsToBounds = true
         profileImageView.contentMode = .scaleAspectFill
         bigStackView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)

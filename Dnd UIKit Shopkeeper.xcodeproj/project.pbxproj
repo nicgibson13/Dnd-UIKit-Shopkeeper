@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		7C033C2C23A5CF8D0089BF66 /* shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C033C2B23A5CF8D0089BF66 /* shop.swift */; };
 		7C033C2F23A6F3BF0089BF66 /* Blacksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C033C2E23A6F3BF0089BF66 /* Blacksmith.swift */; };
-		7C2D1FB92382E30D00FCE71B /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D1FB82382E30D00FCE71B /* Names.swift */; };
-		7C2D1FBB2382EAA500FCE71B /* Characteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D1FBA2382EAA500FCE71B /* Characteristics.swift */; };
+		7C55371624980E0A00EA8CA0 /* NPCStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55371524980E0A00EA8CA0 /* NPCStuff.swift */; };
+		7C55371924980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C55371724980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodeld */; };
 		7C612B71237DC9AB00268E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C612B70237DC9AB00268E93 /* AppDelegate.swift */; };
 		7C612B73237DC9AB00268E93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C612B72237DC9AB00268E93 /* SceneDelegate.swift */; };
 		7C612B75237DC9AB00268E93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C612B74237DC9AB00268E93 /* ViewController.swift */; };
@@ -25,7 +25,8 @@
 		7C7D347F23ABE8B200904869 /* BlacksmithController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D347E23ABE8B200904869 /* BlacksmithController.swift */; };
 		7C7D348123ABFB9700904869 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D348023ABFB9700904869 /* ItemInfoViewController.swift */; };
 		7C95ECB623A80C49003BAFA2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95ECB523A80C49003BAFA2 /* WelcomeViewController.swift */; };
-		7CBDEBC0247052FF0083C1DE /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDEBBF247052FF0083C1DE /* BaseController.swift */; };
+		7CB90F5C2479A23700B3524D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB90F5B2479A23700B3524D /* DashboardViewController.swift */; };
+		7CBDEBC0247052FF0083C1DE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDEBBF247052FF0083C1DE /* BaseViewController.swift */; };
 		7CBDEBC2247053360083C1DE /* BaseContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDEBC1247053360083C1DE /* BaseContainerViewController.swift */; };
 		7CBDEBC42470580B0083C1DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDEBC32470580B0083C1DE /* Extensions.swift */; };
 		7CF3786423A00EE600DC35B3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3786323A00EE600DC35B3 /* ContainerViewController.swift */; };
@@ -35,8 +36,8 @@
 /* Begin PBXFileReference section */
 		7C033C2B23A5CF8D0089BF66 /* shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shop.swift; sourceTree = "<group>"; };
 		7C033C2E23A6F3BF0089BF66 /* Blacksmith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blacksmith.swift; sourceTree = "<group>"; };
-		7C2D1FB82382E30D00FCE71B /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
-		7C2D1FBA2382EAA500FCE71B /* Characteristics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characteristics.swift; sourceTree = "<group>"; };
+		7C55371524980E0A00EA8CA0 /* NPCStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPCStuff.swift; sourceTree = "<group>"; };
+		7C55371824980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dndUIKitShopkeeper.xcdatamodel; sourceTree = "<group>"; };
 		7C612B6D237DC9AB00268E93 /* Dnd UIKit Shopkeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dnd UIKit Shopkeeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C612B70237DC9AB00268E93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C612B72237DC9AB00268E93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +54,8 @@
 		7C7D347E23ABE8B200904869 /* BlacksmithController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacksmithController.swift; sourceTree = "<group>"; };
 		7C7D348023ABFB9700904869 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
 		7C95ECB523A80C49003BAFA2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../Views/WelcomeViewController.swift; sourceTree = "<group>"; };
-		7CBDEBBF247052FF0083C1DE /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		7CB90F5B2479A23700B3524D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		7CBDEBBF247052FF0083C1DE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7CBDEBC1247053360083C1DE /* BaseContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContainerViewController.swift; sourceTree = "<group>"; };
 		7CBDEBC32470580B0083C1DE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7CF3786323A00EE600DC35B3 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -102,9 +104,9 @@
 			children = (
 				7C570E1323C4E47600D6AB75 /* Model Controllers */,
 				7C95ECB423A80AF4003BAFA2 /* Models */,
-				7C95ECB323A80ADE003BAFA2 /* Extras */,
 				7C95ECB123A80A9C003BAFA2 /* View Controllers */,
 				7C95ECB223A80AB4003BAFA2 /* Views */,
+				7C95ECB323A80ADE003BAFA2 /* Extras */,
 				7C612B7E237DC9AB00268E93 /* Info.plist */,
 			);
 			path = "Dnd UIKit Shopkeeper";
@@ -117,9 +119,10 @@
 				7C612B74237DC9AB00268E93 /* ViewController.swift */,
 				7C95ECB523A80C49003BAFA2 /* WelcomeViewController.swift */,
 				7C7D348023ABFB9700904869 /* ItemInfoViewController.swift */,
-				7CBDEBBF247052FF0083C1DE /* BaseController.swift */,
+				7CBDEBBF247052FF0083C1DE /* BaseViewController.swift */,
 				7CBDEBC1247053360083C1DE /* BaseContainerViewController.swift */,
 				7C6505ED2472E48100694418 /* BigContainerViewController.swift */,
+				7CB90F5B2479A23700B3524D /* DashboardViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				7C612B72237DC9AB00268E93 /* SceneDelegate.swift */,
 				7C612B7B237DC9AB00268E93 /* LaunchScreen.storyboard */,
 				7CBDEBC32470580B0083C1DE /* Extensions.swift */,
+				7C55371724980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodeld */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -150,10 +154,9 @@
 			children = (
 				7C612B86237DCAF800268E93 /* magicItem.swift */,
 				7C033C2B23A5CF8D0089BF66 /* shop.swift */,
-				7C2D1FB82382E30D00FCE71B /* Names.swift */,
 				7C033C2E23A6F3BF0089BF66 /* Blacksmith.swift */,
 				7CF3786523A0153100DC35B3 /* shopItem.swift */,
-				7C2D1FBA2382EAA500FCE71B /* Characteristics.swift */,
+				7C55371524980E0A00EA8CA0 /* NPCStuff.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C612B8B237DE04F00268E93 /* magicItemController.swift in Sources */,
+				7CB90F5C2479A23700B3524D /* DashboardViewController.swift in Sources */,
 				7C7D348123ABFB9700904869 /* ItemInfoViewController.swift in Sources */,
 				7CF3786623A0153100DC35B3 /* shopItem.swift in Sources */,
 				7C033C2C23A5CF8D0089BF66 /* shop.swift in Sources */,
@@ -238,12 +242,12 @@
 				7C6505EE2472E48100694418 /* BigContainerViewController.swift in Sources */,
 				7C033C2F23A6F3BF0089BF66 /* Blacksmith.swift in Sources */,
 				7CBDEBC42470580B0083C1DE /* Extensions.swift in Sources */,
-				7CBDEBC0247052FF0083C1DE /* BaseController.swift in Sources */,
-				7C2D1FB92382E30D00FCE71B /* Names.swift in Sources */,
-				7C2D1FBB2382EAA500FCE71B /* Characteristics.swift in Sources */,
+				7CBDEBC0247052FF0083C1DE /* BaseViewController.swift in Sources */,
+				7C55371624980E0A00EA8CA0 /* NPCStuff.swift in Sources */,
 				7C612B71237DC9AB00268E93 /* AppDelegate.swift in Sources */,
 				7C7D347F23ABE8B200904869 /* BlacksmithController.swift in Sources */,
 				7C612B87237DCAF800268E93 /* magicItem.swift in Sources */,
+				7C55371924980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodeld in Sources */,
 				7C612B89237DDBCF00268E93 /* Open5e.swift in Sources */,
 				7C612B8D237DE63A00268E93 /* ItemTableViewCell.swift in Sources */,
 				7C612B73237DC9AB00268E93 /* SceneDelegate.swift in Sources */,
@@ -454,6 +458,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7C55371724980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7C55371824980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodel */,
+			);
+			currentVersion = 7C55371824980FC000EA8CA0 /* dndUIKitShopkeeper.xcdatamodel */;
+			path = dndUIKitShopkeeper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C612B65237DC9AA00268E93 /* Project object */;
 }

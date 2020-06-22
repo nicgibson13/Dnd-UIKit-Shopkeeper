@@ -16,7 +16,6 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var getStartedProtocol: GetStartedButtonTapped!
     
-    
     @IBOutlet weak var shopTypePickerView: UIPickerView!
     @IBOutlet weak var townSizePickerView: UIPickerView!
     @IBOutlet weak var getStartedButton: UIButton!
@@ -44,7 +43,8 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         shopTypePickerView.delegate = self
         getStartedButton.layer.borderWidth = 1
         getStartedButton.layer.borderColor = UIColor.white.cgColor
-        getStartedButton.layer.cornerRadius = getStartedButton.frame.height / 2
+        getStartedButton.layer.cornerRadius = (getStartedButton.frame.height) / 2
+        self.view.backgroundColor = .clear
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

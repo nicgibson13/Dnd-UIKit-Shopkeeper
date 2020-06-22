@@ -8,54 +8,20 @@
 
 import UIKit
 
-class ContainerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ContainerViewController: UIViewController {
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == townSizePickerView {
-            return townSizePickerData[row]
-        } else {
-            return shopTypePickerData[row]
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == townSizePickerView {
-            return 5
-        } else {
-            return 2
-        }
-    }
-    
-    @IBOutlet weak var menuTitleLabel: UILabel!
-    @IBOutlet weak var townSizeLabel: UILabel!
-    @IBOutlet weak var townSizePickerView: UIPickerView!
-    @IBOutlet weak var shopTypeLabel: UILabel!
-    @IBOutlet weak var shopTypePickerView: UIPickerView!
-    
-    var townSizePickerData : [String] = [String]()
-    var shopTypePickerData : [String] = [String]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        townSizePickerView.dataSource = self
-        townSizePickerView.delegate = self
-        shopTypePickerView.dataSource = self
-        shopTypePickerView.delegate = self
-                
-    townSizePickerData = [
-        "Village", "Small Town", "Large Town", "Small City", "Large City"
-        ]
-    
-    shopTypePickerData = [
-        "Blacksmith", "General Store"
-        
-        //, "Leatherworker", "Temple/Faith", "Fletcher", "Supplies", , "Adventuring Supplies", "Jeweler", "Tailor", "Potion Shop", "Arcane Shop"
-        ]
-        
-    }
+//    @IBAction func shopkeeperButtonTapped(_ sender: Any) {
+//        let SI = Characteristics.sharedInstance
+//        let race = SI.races.randomElement()!
+//        raceLabel.text = "Race: \(race)"
+//        let gender = SI.gender.randomElement()!
+//        genderLabel.text = "Gender: \(gender.capitalized)"
+//        hairLabel.text = "Hair Color: \(SI.hairColor.randomElement()!)"
+//        eyesLabel.text = "Eye Color: \(SI.eyeColor.randomElement()!)"
+//        mannerismsLabel.text = "Mannerisms: \(SI.mannerisms.randomElement()!)"
+//        shopkeeperImage.image = UIImage(named: "\(gender)\(race)")
+//        let name = retrieveName(name: "\(gender)\(race)")
+//        nameLabel.text = "Name: \(name)"
+//    }
     
 }

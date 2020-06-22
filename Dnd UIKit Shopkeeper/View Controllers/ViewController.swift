@@ -19,23 +19,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var numberOfVeryRareItems: Int = BlacksmithController.sharedInstance.v
     var numberOfLegendaryItems: Int = BlacksmithController.sharedInstance.l
     
-    
+    @IBOutlet var gestureRecognizer: UIScreenEdgePanGestureRecognizer!
     @IBOutlet weak var shopTitleButton: UIButton!
-    @IBOutlet weak var generateShopkeeperButton: UIButton!
-    
     @IBOutlet weak var itemTableView: UITableView!
     @IBOutlet weak var inflationSlider: UISlider!
     @IBOutlet weak var inflationLabel: UILabel!
-    @IBOutlet weak var shopkeeperImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var raceLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var eyesLabel: UILabel!
-    @IBOutlet weak var hairLabel: UILabel!
-    @IBOutlet weak var mannerismsLabel: UILabel!
     @IBOutlet weak var slideOutMenuView: UIView!
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
     @IBOutlet weak var hamburgerButton: UIBarButtonItem!
+    @IBOutlet weak var peekingView: UIView!
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
@@ -124,7 +116,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shopTitleButton.setTitle("\(typeOfShop!)", for: .normal)
+        gestureRecognizer.edges = .right
+        peekingView.layer.borderWidth = 0.5
+        peekingView.layer.borderColor = UIColor.white.cgColor
+//        shopTitleButton.setTitle("\(typeOfShop!)", for: .normal)
         itemTableView.delegate = self
         itemTableView.dataSource = self
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -134,9 +129,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                name: NSNotification.Name("ToggleSideMenu"),
                                                object: nil)
         
-        generateShopkeeperButton.layer.borderWidth = 1
-        generateShopkeeperButton.layer.borderColor = UIColor.white.cgColor
-        generateShopkeeperButton.layer.cornerRadius = generateShopkeeperButton.frame.height / 2
         
         // Do any additional setup after loading the view.
     }
@@ -148,6 +140,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         DispatchQueue.main.async {
             self.itemTableView.reloadData()
         }
+    }
+    
+    @IBAction func swipedFromEdge(_ sender: Any) {
+        performSegue(withIdentifier: "showShopkeepContainer", sender: self)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -164,19 +160,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func shopkeeperButtonTapped(_ sender: Any) {
-        let SI = Characteristics.sharedInstance
-        let race = SI.races.randomElement()!
-        raceLabel.text = "Race: \(race)"
-        let gender = SI.gender.randomElement()!
-        genderLabel.text = "Gender: \(gender.capitalized)"
-        hairLabel.text = "Hair Color: \(SI.hairColor.randomElement()!)"
-        eyesLabel.text = "Eye Color: \(SI.eyeColor.randomElement()!)"
-        mannerismsLabel.text = "Mannerisms: \(SI.mannerisms.randomElement()!)"
-        shopkeeperImage.image = UIImage(named: "\(gender)\(race)")
-        let name = retrieveName(name: "\(gender)\(race)")
-        nameLabel.text = "Name: \(name)"
-    }
     
     @IBAction func buttonTapped(_ sender: Any) {
     }

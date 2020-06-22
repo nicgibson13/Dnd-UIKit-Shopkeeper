@@ -8,99 +8,74 @@
 
 import UIKit
 
-class BigContainerViewController: UIViewController {
-
+class BigContainerViewController: UIViewController, SideSelectionDelegate {
+    
+    func didTapButton(sender: BaseContainerViewController, previousVC: Int,buttonNumber: Int) {
+        if previousVC == 0 {
+            removeVC(vc: dashboardVC)
+            if buttonNumber == 1 {
+                addVC(vc: shopVC)
+                
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        addVC(vc: shopVC)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addView(asChildViewController: WelcomeViewController)
+        self.view.backgroundColor = .clear
+        let baseContainerViewController = BaseContainerViewController()
+        baseContainerViewController.selectionDelegate = self
         // Do any additional setup after loading the view.
-        delegateFunction()
     }
-        
-    private var shopViewController: ViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(identifier: "ViewController") as! ViewController
-        self.addView(asChildViewController: viewController)
+    
+    var welcomeVC: WelcomeViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let viewController = storyboard.instantiateViewController(identifier: "WelcomeVC") as! WelcomeViewController
+        self.addChild(viewController)
         return viewController
     }
     
-    private var WelcomeViewController: WelcomeViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(identifier: "WelcomeViewController") as! WelcomeViewController
-        self.addView(asChildViewController: viewController)
+    var dashboardVC: DashboardViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let viewController = storyboard.instantiateViewController(identifier: "DashboardVC") as! DashboardViewController
+        self.addChild(viewController)
         return viewController
     }
     
-//    private var shopViewController: ViewController {
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        let viewController = storyboard.instantiateViewController(identifier: "ViewController") as! ViewController
-//        self.addView(asChildViewController: viewController)
-//        return viewController
-//    }
-//
-//    private var shopViewController: ViewController {
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        let viewController = storyboard.instantiateViewController(identifier: "ViewController") as! ViewController
-//        self.addView(asChildViewController: viewController)
-//        return viewController
-//    }
-
-    func delegateFunction() {
-        let BaseContainerVC = storyboard?.instantiateViewController(identifier: "BaseContainerViewController") as! BaseContainerViewController
-        BaseContainerVC.selectionDelegate = self
-        let WelcomeVC = storyboard?.instantiateViewController(identifier: "WelcomeViewController") as! WelcomeViewController
-        WelcomeVC.getStartedProtocol = self
+    var shopVC: ViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let viewController = storyboard.instantiateViewController(identifier: "ShopVC") as! ViewController
+        self.addChild(viewController)
+        return viewController
     }
     
-    private func addView(asChildViewController viewController: UIViewController) {
-        // Add Child View Controller
-        addChild(viewController)
-
-        // Add Child View as Subview
-        view.addSubview(viewController.view)
-
-        // Configure Child View
-        viewController.view.frame = view.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
-        // Notify Child View Controller
-        viewController.didMove(toParent: self)
+    func addVC(vc: UIViewController) {
+        addChild(vc)
+        view.addSubview(vc.view)
+        vc.view.frame = view.bounds
+        vc.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        vc.didMove(toParent: self)
     }
-
-    private func removeView(asChildViewController viewController: UIViewController) {
-        // Notify Child View Controller
-        viewController.willMove(toParent: nil)
-
-        // Remove Child View From Superview
-        viewController.view.removeFromSuperview()
-
-        // Notify Child View Controller
-        viewController.removeFromParent()
+    
+    func removeVC(vc: UIViewController) {
+        vc.willMove(toParent: nil)
+        vc.view.removeFromSuperview()
+        vc.removeFromParent()
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-}
-
-extension BigContainerViewController: SideSelectionDelegate {
-    func didTapButton(controller: UIViewController) {
-        removeView(asChildViewController: self.presentedViewController!)
-        addView(asChildViewController: controller)
-    }
-}
-
-extension BigContainerViewController: GetStartedButtonTapped {
-    func presentNext(controller: UIViewController) {
-        removeView(asChildViewController: self.presentedViewController!)
-        addView(asChildViewController: controller)
-    }
-    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
 }
